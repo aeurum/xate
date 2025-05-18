@@ -1,0 +1,44 @@
+{
+  "name": "xate",
+  "version": "0.0.1",
+  "description": "Access Exchange Rate APIs.",
+  "main": "dist/main.js",
+  "module": "dist/main.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/main.mjs",
+      "require": "./dist/main.js"
+    }
+  },
+  "scripts": {
+    "test_cjs": "node test/xate.test.cjs",
+    "test_mjs": "node test/xate.test.mjs",
+    "build": "npx tsup source/main.js --format esm,cjs --dts"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "api",
+    "rest",
+    "forex",
+    "rate",
+    "rates",
+    "exchange",
+    "exchanges",
+    "xra",
+    "oxr",
+    "exchangerate-api",
+    "openexchangerates"
+  ],
+  "author": "Me",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "axios": "^1.8.4"
+  }
+}
