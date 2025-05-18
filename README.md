@@ -35,11 +35,13 @@ const xate = new Xate(provider, apiKey)
 ### Types
 
 #### Currencies
+`Currencies` object represents a list of currencies.
 | Key | Value |
 | --- | --- |
 | Currency code | Currency name |
 
 #### Rates
+`Rates` object represents a list of exchange rates.
 | Key | Value |
 | --- | --- |
 | Currency code | Currency exchange rate |
@@ -83,13 +85,13 @@ const xate = new Xate(provider, apiKey)
 | rates | Rates | Exchange rates |
 
 #### Historical Rates
-`xate.historical(date, [ parameters ])` returns historical rates for the requested date in YYYY-MM-DD format.
+`xate.historical(date, [ parameters ])` returns historical rates for the requested `date` in YYYY-MM-DD format.
 
 #### Parameters
 | Parameter | Type | Necessity | Description | Default |
 | --- | --- | --- | --- | --- |
 | base | String | Optional | Base currency | USD |
-| show_alternative | Boolean | Optional | Pass _True_ to extend returned values with alternative, black market, and digital currency rates (OpenExchangeRates only) | False |
+| show_alternative | Boolean | Optional | Pass _True_ to extend returned values with alternative, black market, and digital currency rates (OpenExchangeRates only) | _False_ |
 
 ##### Response
 | Property | Type | Description |
